@@ -13,6 +13,9 @@ app.use("/api", youtubeRouter);
 const playLogRouter = require("./routes/playLog");
 app.use("/api", playLogRouter);
 
+const winLogRouter = require("./routes/winLog");
+app.use("/api", winLogRouter);
+
 app.listen(port, () => {
   console.log(`Backend server listening at http://localhost:${port}`);
 });
