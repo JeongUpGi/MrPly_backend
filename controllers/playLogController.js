@@ -1,9 +1,8 @@
 const { insertPlayLog, selectPlayLogs } = require("../models/playLogModel");
 
-// 로그 저장
+// 재생 로그 저장
 exports.savePlayLog = (req, res) => {
-  console.log("req ===> ", req.body);
-  const { videoId, title, artist, thumbnailUrl, playedAt } = req.body;
+  const { videoId, title, artist, thumbnailUrl } = req.body;
   if (!videoId || !title || !artist || !thumbnailUrl) {
     return res
       .status(400)
@@ -28,7 +27,7 @@ exports.savePlayLog = (req, res) => {
   );
 };
 
-// 로그 조회
+// 재생 로그 조회
 exports.getMusicRank = (req, res) => {
   selectPlayLogs((err, results) => {
     if (err) {

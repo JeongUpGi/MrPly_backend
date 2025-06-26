@@ -9,7 +9,6 @@ exports.insertPlayLog = (
   playedAt,
   callback
 ) => {
-  console.log("playedAt");
   const sql = `
       INSERT INTO play_logs (video_id, title, artist, thumbnail_url, last_played_date, play_count)
       VALUES (?, ?, ?, ?, ?, 1)
